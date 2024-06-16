@@ -72,3 +72,43 @@ const departments = {
 }
 
 console.log(departments);
+console.log("De afdeling sales heeft" +" "+ departments.sales.numberOfEmployees + " " + "medewerkers");
+console.log(departments.marketing+"Marketing is een leuke afdeling om te werken.");
+console.log("De afdeling Customers service heeft" +" "+ departments["customer-service"].numberOfEmployees + " " + "medewerkers");
+// JEFF, Hier HEB IK JE HULP NODIG MAN
+// IK KRIJG DE VOLGENDE CODE "ZONDER $" NIET JUIST"
+// console.log(departments.sales.jobs + "Sales is een uitdagende afdeling om te werken als Verkoopmanager.");
+const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
+console.log('Je koos ' + userInput + '.');
+// switch statement
+switch (userInput) {
+    case 'marketing':
+        console.log('Je koos ' + userInput + '.' + departments.marketing + '.');
+        break;
+    case 'sales':
+        console.log('je koos ' + userInput + '.' + departments.sales + '.');
+        break;
+        case 'customer-service':
+            console.log('Je koos' + userInput + '.' + departments["customer-service"] + '.');
+            break;
+    default:
+        console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+}
+
+const chosenDepartment = 'marketing'
+const marketingJobs = departments[chosenDepartment].jobs;
+const marketing = prompt('Je koos ' + chosenDepartment + '. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.' +
+    '\n0: ' + marketingJobs[0].title +
+    '\n1: ' + marketingJobs[1].title +
+    '\n2: ' + marketingJobs[2].title +
+    '\n3: ' + marketingJobs[3].title);
+
+
+console.log(marketing);
+const chosenDepartments = 'marketing';
+const userInputs = 1;
+
+const marketingJobss = departments[chosenDepartments].jobs;
+const chosenJob = marketingJobss[userInputs];
+
+console.log(`Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`);
