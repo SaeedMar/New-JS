@@ -113,3 +113,22 @@ const marketingJobss = departments[chosenDepartments].jobs;
 const chosenJob = marketingJobss[userInputs];
 
 console.log(`Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`);
+const userInputs = 2;
+
+const marketingJobss = departments[chosenDepartments].jobs;
+const chosenJob = marketingJobss[userInputs];
+
+console.log(`Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`);
+const userInputs = 3;
+
+const marketingJobss = departments[chosenDepartments].jobs;
+const chosenJob = marketingJobss[userInputs];
+
+console.log(`Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`);
+const userInputs = 0;
+
+const marketingJobss = departments[chosenDepartments].jobs;
+const chosenJob = marketingJobss[userInputs];
+
+console.log(`Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`);
+
