@@ -78,7 +78,7 @@ console.log("De afdeling Customers service heeft" +" "+ departments["customer-se
 // JEFF, Hier HEB IK JE HULP NODIG MAN
 // IK KRIJG DE VOLGENDE CODE "ZONDER $" NIET JUIST"
 // console.log(departments.sales.jobs + "Sales is een uitdagende afdeling om te werken als Verkoopmanager.");
-const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
+let userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
 console.log('Je koos ' + userInput + '.');
 // switch statement
 switch (userInput) {
