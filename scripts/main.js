@@ -106,6 +106,7 @@ const marketing = prompt('Je koos ' + chosenDepartment + '. Over welke functie w
 
 console.log(marketing);
 const chosenDepartments = 'marketing';
+// dit was met behulp van chatGPT (moet ik hier ook voor nummer [2] en [3] ook dezelfde schrijven?
 const userInputs = 1;
 
 const marketingJobss = departments[chosenDepartments].jobs;
