@@ -107,28 +107,28 @@ const marketing = prompt('Je koos ' + chosenDepartment + '. Over welke functie w
 console.log(marketing);
 const chosenDepartments = 'marketing';
 // dit was met behulp van chatGPT (moet ik hier ook voor nummer [2] en [3] ook dezelfde schrijven?
-const userInputs = 1;
+let userInput1 = 1;
 
-const marketingJobss = departments[chosenDepartments].jobs;
-const chosenJob = marketingJobss[userInputs];
+const marketingJobs1 = departments[chosenDepartments].jobs;
+const chosenJob1 = marketingJobs1[userInput1];
 
-console.log(`Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`);
-const userInputs = 2;
+console.log(`Je koos ${chosenJob1.title}. Een uitdagende rol! ${chosenJob1.description}`);
+let userInput2 = 2;
 
-const marketingJobss = departments[chosenDepartments].jobs;
-const chosenJob = marketingJobss[userInputs];
+const marketingJobs2 = departments[chosenDepartments].jobs;
+const chosenJob2 = marketingJobs2[userInput2];
 
-console.log(`Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`);
-const userInputs = 3;
+console.log(`Je koos ${chosenJob2.title}. Een uitdagende rol! ${chosenJob2.description}`);
+let userInput3 = 3;
 
-const marketingJobss = departments[chosenDepartments].jobs;
-const chosenJob = marketingJobss[userInputs];
+const marketingJobs3 = departments[chosenDepartments].jobs;
+const chosenJob3 = marketingJobs3[userInput3];
 
-console.log(`Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`);
-const userInputs = 0;
+console.log(`Je koos ${chosenJob3.title}. Een uitdagende rol! ${chosenJob3.description}`);
+let userInputs = 0;
 
-const marketingJobss = departments[chosenDepartments].jobs;
-const chosenJob = marketingJobss[userInputs];
+const marketingJobs0 = departments[chosenDepartments].jobs;
+const chosenJob = marketingJobs0[userInputs];
 
 console.log(`Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`);
 
