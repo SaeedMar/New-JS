@@ -98,7 +98,7 @@ switch (userInput) {
         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
 }
 let chosenDepartment = 'marketing';
-
+// ik heb chatgpt hulp gekregen , dit was te moelijk voor mij
 let jobTitles = departments[chosenDepartment].jobs;
 
 let userInput1 = prompt('Je koos ' + chosenDepartment + '. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n' +
