@@ -47,7 +47,7 @@ const departments = {
             }
         ]
     },
-    "customer-service": {
+    customerservice: {
         description: "Klantenservice richt zich op het bieden van uitzonderlijke ondersteuning en assistentie aan klanten vóór, tijdens en na hun interacties met een bedrijf. Het draait om het opbouwen van positieve relaties met klanten en ervoor zorgen dat ze tevreden zijn door hun vragen, zorgen en behoeften aan te pakken. Klantenserviceprofessionals fungeren als de vertegenwoordigers van een bedrijf, als het eerste aanspreekpunt voor klanten. Ze maken gebruik van verschillende communicatiekanalen, zoals telefoongesprekken, e-mails, live chats of persoonlijke interacties, om klanten op een vriendelijke, efficiënte en empathische manier te helpen.",
         numberOfEmployees: 32,
         jobs: [
@@ -74,61 +74,77 @@ const departments = {
 console.log(departments);
 console.log("De afdeling sales heeft" +" "+ departments.sales.numberOfEmployees + " " + "medewerkers");
 console.log(departments.marketing+"Marketing is een leuke afdeling om te werken.");
-console.log("De afdeling Customers service heeft" +" "+ departments["customer-service"].numberOfEmployees + " " + "medewerkers");
+console.log("De afdeling Customers service heeft" +" "+ departments["customerservice"].numberOfEmployees + " " + "medewerkers");
 // JEFF, Hier HEB IK JE HULP NODIG MAN
 // IK KRIJG DE VOLGENDE CODE "ZONDER $" NIET JUIST"
-// console.log(departments.sales.jobs + "Sales is een uitdagende afdeling om te werken als Verkoopmanager.");
-let userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
+console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. " + departments.sales.jobs[1].description);
+
+let userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customerservice]');
 console.log('Je koos ' + userInput + '.');
-// switch statement
 switch (userInput) {
     case 'marketing':
-        console.log('Je koos ' + userInput + '.' + departments.marketing + '.');
+        console.log([departments.marketing] + 'is een leuke afdeling om te werken. Er werken op dit moment ' + departments[userInput].numberOfEmployees + 'medewerkers.');
+        console.log('Afdeling beschrijving: ' + departments[userInput].description);
         break;
     case 'sales':
-        console.log('je koos ' + userInput + '.' + departments.sales + '.');
+        console.log([departments.sales] + 'is een leuke afdeling om te werken. Er werken op dit moment ' + departments[userInput].numberOfEmployees + 'medewerkers.');
+        console.log('Afdeling beschrijving: ' + departments[userInput].description);
         break;
-        case 'customer-service':
-            console.log('Je koos' + userInput + '.' + departments["customer-service"] + '.');
-            break;
+    case 'customerservice':
+        console.log([departments.customerservice] + 'is een leuke afdeling om te werken. Er werken op dit moment ' + departments[userInput].numberOfEmployees + 'medewerkers.');
+        console.log('Afdeling beschrijving: ' + departments[userInput].description);
+        break;
     default:
         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
 }
+let chosenDepartment = 'marketing';
 
-const chosenDepartment = 'marketing'
-const marketingJobs = departments[chosenDepartment].jobs;
-const marketing = prompt('Je koos ' + chosenDepartment + '. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.' +
-    '\n0: ' + marketingJobs[0].title +
-    '\n1: ' + marketingJobs[1].title +
-    '\n2: ' + marketingJobs[2].title +
-    '\n3: ' + marketingJobs[3].title);
+let jobTitles = departments[chosenDepartment].jobs;
+
+let userInput1 = prompt('Je koos ' + chosenDepartment + '. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n' +
+    '0: ' + jobTitles[0].title + '\n' +
+    '1: ' + jobTitles[1].title + '\n' +
+    '2: ' + jobTitles[2].title + '\n' +
+    '3: ' + jobTitles[3].title);
+
+// Converteer de invoer naar een getal
+let index = Number(userInput1);
+if (userInput1 !== null && userInput1 !== '' && !isNaN(index)) {
+    // Controleer of het getal binnen het bereik van 0 tot 3 ligt
+    if (index >= 0) {
+        if (index <= 3) {
+            console.log('Je koos functie ' + index + ': ' + jobTitles[index].title + '. ' + jobTitles[index].description);
+        } else {
+            console.error("Ongeldige keuze. Voer een geldig getal tussen 0 en 3 in.");
+        }
+    } else {
+        console.error("Ongeldige keuze. Voer een geldig getal tussen 0 en 3 in.");
+    }
+}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
-console.log(marketing);
-const chosenDepartments = 'marketing';
-// dit was met behulp van chatGPT (moet ik hier ook voor nummer [2] en [3] ook dezelfde schrijven?
-let userInput1 = 1;
 
-const marketingJobs1 = departments[chosenDepartments].jobs;
-const chosenJob1 = marketingJobs1[userInput1];
 
-console.log(`Je koos ${chosenJob1.title}. Een uitdagende rol! ${chosenJob1.description}`);
-let userInput2 = 2;
 
-const marketingJobs2 = departments[chosenDepartments].jobs;
-const chosenJob2 = marketingJobs2[userInput2];
 
-console.log(`Je koos ${chosenJob2.title}. Een uitdagende rol! ${chosenJob2.description}`);
-let userInput3 = 3;
 
-const marketingJobs3 = departments[chosenDepartments].jobs;
-const chosenJob3 = marketingJobs3[userInput3];
 
-console.log(`Je koos ${chosenJob3.title}. Een uitdagende rol! ${chosenJob3.description}`);
-let userInputs = 0;
 
-const marketingJobs0 = departments[chosenDepartments].jobs;
-const chosenJob = marketingJobs0[userInputs];
 
-console.log(`Je koos ${chosenJob.title}. Een uitdagende rol! ${chosenJob.description}`);
+
+
+
+
+
+
 
